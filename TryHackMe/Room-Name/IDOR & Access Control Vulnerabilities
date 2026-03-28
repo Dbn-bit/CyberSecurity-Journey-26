@@ -1,1 +1,109 @@
+What is IDOR?
 
+Insecure Direct Object Reference (IDOR) occurs when an application exposes internal object references (like user IDs or file names) and fails to verify whether the requester is authorized to access them.
+
+Concept:
+- User requests their own resource
+- Attacker modifies the identifier
+- Server fails to validate access
+- Unauthorized data is returned
+
+Example
+GET /api/user?user_id=123   ← Legit request
+GET /api/user?user_id=124   ← Tampered request
+
+If no authorization check exists →  Data exposure
+
+ Impact
+Data leakage (user profiles, financial data)
+Horizontal privilege escalation
+Account takeover vectors
+API abuse
+Chained attacks → full compromise
+
+Types of Access Control Vulnerabilities
+1. Horizontal Privilege Escalation
+
+Accessing another user's data at the same privilege level.
+GET /account?user_id=456
+
+2. Vertical Privilege Escalation
+
+Accessing higher-level (admin) functionality.
+GET /admin/deleteUser?id=123
+
+3. Missing Access Control
+
+No authorization checks at all.
+
+The digital equivalent of leaving your vault open and hoping nobody notices.
+
+4. Broken Object-Level Authorization (BOLA)
+API-focused term for IDOR
+Common in REST APIs
+5. Context-Dependent Access Control
+
+Access depends on workflow state, but is not enforced.
+
+Example:
+
+Skipping payment → directly accessing /order/confirmation
+ ID Handling & Security Myths
+
+“If I hide the ID, I fix the problem.”
+ No. That’s security theater.
+
+ Encoded IDs (Base64, etc.)
+123 → MTIz
+Easily reversible
+No real protection
+
+Security Level: None
+
+Hashed IDs (MD5, SHA)
+123 → 202cb962ac59075b964b07152d234b70
+Vulnerable to brute force
+Predictable for small inputs
+Still no authorization enforcement
+
+Security Level: Weak
+
+Unpredictable IDs (UUIDs)
+550e8400-e29b-41d4-a716-446655440000
+Hard to guess
+Good for obscurity
+
+Security Level: Better (Defense-in-depth only)
+ Still requires authorization checks
+
+ Prevention Strategies
+ Always Enforce Server-Side Authorization
+
+Never trust user input.
+
+if request.user.id != resource.owner_id:
+    deny_access()
+ Use Indirect Object References
+
+Map public IDs to internal ones.
+
+/public/profile/abc123 → internal user_id=42
+ Implement RBAC (Role-Based Access Control)
+Admin
+User
+Moderator
+ Validate Ownership
+
+Check if the resource belongs to the authenticated user.
+
+ Log & Monitor Access Patterns
+
+Look for:
+
+ID enumeration attempts
+Repeated access failures
+My Key Takeaway
+
+IDOR isn’t about guessing IDs.
+It’s about the system failing to ask:
+“Should this user even be here?”
