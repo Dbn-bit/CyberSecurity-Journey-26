@@ -68,8 +68,8 @@ Example:
 
 Interesting Target Files
 LINUX
-/etc/passwd
-/etc/shadow
+/etc/passwd - all registered users that have access to the system
+/etc/shadow - information about the system users password
 /var/www/html/config.php
 
 WINDOWS
