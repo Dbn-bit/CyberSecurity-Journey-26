@@ -15,6 +15,21 @@ GET /download?file=report.pdf
  Exploit:
 GET /download?file=../../../../etc/passwd
 
+Mini Lab Idea
+
+Goal: Read a restricted file
+
+Create a test app with file loading
+Try:
+?page=../../etc/passwd
+Observe output
+
+Ask:
+
+Can you escape directories?
+Are inputs filtered?
+
+
 If vulnerable → server returns system file contents
 
  Impact
