@@ -1,0 +1,19 @@
+# The purpose of this script is to check the basic system information.
+
+Project Name: Cyber Beast System Info-Check.
+
+It doesn't exactly solve an issue. 
+it was created to help me familiarise better with bash scripting.
+
+TOOLS
+Bash
+Linux
+Git
+
+Implementation
+Created the script using (nano) command
+named the script.
+used the echo commands to clearly customize what i wanted the header of the script to show(Cyber Beast System Info)
+Saved the hostname as a variable because i plan to call on it.
+I did the same for Username and Kernel version.
+
