@@ -1,0 +1,163 @@
+# 🧠 Packet Runner
+
+> A cybersecurity learning game where you are the packet.
+
+---
+
+## 🌐 Overview
+
+**Packet Runner** is a browser-based cybersecurity simulation game where players embody a **data packet navigating a hostile digital network**.
+
+Instead of traditional combat, survival depends on understanding real-world cyber threats such as malware, phishing, firewalls, and network attacks.
+
+The goal is simple:
+
+> 🧭 Reach the destination server alive.
+
+But the network doesn’t want you to.
+
+---
+
+## ⚡ Core Idea
+
+You are not a hero.
+
+You are a **packet of data**.
+
+And the internet is alive.
+
+Every route is a risk.  
+Every node is a decision.  
+Every mistake is an attack.
+
+---
+
+## 🎮 Gameplay Loop
+
+1. Spawn as a data packet
+2. Navigate through network nodes
+3. Avoid or bypass cyber threats
+4. Collect security tools and upgrades
+5. Reach the destination server
+6. Learn the cybersecurity concept behind each challenge
+
+---
+
+## 🧩 Cybersecurity Learning System
+
+Each gameplay element maps to a real-world cyber concept:
+
+| Game Element        | Real-World Concept              |
+|--------------------|--------------------------------|
+| Phishing traps 🎣   | Social engineering attacks      |
+| Malware nodes 🦠    | Viruses, trojans, infections    |
+| Firewall zones 🔥   | Network security rules          |
+| DDoS storms 🌪️     | Traffic overload attacks        |
+| Encryption keys 🔐  | Data protection methods         |
+| Secure servers 🧭   | Authentication & trust systems  |
+
+---
+
+## 🧱 Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript (core logic)
+- Phaser.js (2D game engine)
+- Future upgrade: WebGL / Unity 3D expansion
+
+---
+
+## 🗺️ Mission System
+
+The game is structured as progressive cybersecurity missions:
+
+### ✅ Mission 001 — Packet Awakening
+- Introduction to packet identity
+- Basic movement through nodes
+
+### ✅ Mission 002 — Routing Basics
+- Path selection mechanics
+- Dead node avoidance
+
+### ✅ Mission 003 — Phishing Awareness
+- Fake nodes and spoofed routes
+- Trust validation mechanics
+
+### ✅ Mission 004 — Malware Encounter
+- Infected node behavior
+- Evasion mechanics
+
+### ✅ Mission 005 — Firewall Barrier
+- Permission-based navigation
+- Blocked route logic
+
+### 🔄 Mission 006 — Secure Passage Protocol
+- Firewall timing patterns
+- Secure tunneling introduction
+
+### 🚧 Mission 007 — Source Tracking Protocol
+- Identify compromised origins
+- Early threat intelligence mechanics
+
+---
+
+## 🧠 Design Philosophy
+
+> “If you can play cybersecurity, you can understand cybersecurity.”
+
+Packet Runner transforms abstract security concepts into **interactive survival mechanics**.
+
+No memorization.  
+No lectures.  
+Just experience.
+
+---
+
+## 🎨 Visual Direction
+
+- Neon cyber-grid environments 🌐
+- Dark network void backgrounds
+- Glowing packet trails
+- Corrupted node animations
+- Terminal-style UI overlays
+
+---
+
+## 🚀 Future Expansion
+
+- 3D network exploration mode
+- AI firewall boss battles
+- Multiplayer packet racing
+- Skill trees (Encryption, Speed, Stealth)
+- Real-world cyberattack simulations
+- Web-based leaderboard system
+
+---
+
+## 📌 Current Status
+
+- Concept Design: ✔ Complete
+- Mission Structure: ✔ Defined (1–7)
+- Gameplay Prototype: 🚧 In development
+- First MVP (Phaser.js): 🔜 Planned
+
+---
+
+## 🧾 One-Line Pitch
+
+> A cyber-learning game where survival means understanding the network.
+
+---
+
+## ⚡ Status Philosophy
+
+The network doesn’t give second chances.  
+Neither does cybersecurity.
+
+Stay sharp. Stay encrypted.
+
+---
+
+## 🇩🇪 German Boost
+
