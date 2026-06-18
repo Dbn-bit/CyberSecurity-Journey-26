@@ -1,1 +1,112 @@
+A cybersecurity learning game where you are the packet.
+Concept Overview
 
+Packet Runner is a browser-based cybersecurity game where the player takes on the role of a data packet traveling through a hostile digital network.
+
+The goal is simple in theory but chaotic in execution:
+
+Reach the destination server alive while surviving real-world inspired cyber threats.
+
+Instead of swords or guns, your enemies are:
+
+Malware clusters 
+Phishing traps 
+Firewalls & filters 
+DDoS storm zones 
+Corrupted nodes & spoofed routes 
+
+And your upgrades are cybersecurity concepts:
+
+Encryption keys 
+VPN tunnels 
+Security patches 
+Authentication tokens 
+
+🎮 Gameplay Core Loop
+Spawn as a data packet
+Navigate network nodes (routes)
+Avoid or bypass cyber threats
+Collect security tools (buffs)
+Reach destination server
+Learn the concept behind each obstacle
+
+Each mission teaches a real cybersecurity principle disguised as gameplay.
+
+🧩 Learning System (Core Idea)
+
+Every hazard = a lesson:
+
+Game Element	
+Real Cybersecurity Concept
+Phishing trap	Social engineering attacks
+Firewall zone	Network filtering & rules
+Malware node	Virus/trojan infection behavior
+DDoS storm	Traffic overload attacks
+Encryption key	Data protection
+Secure server endpoint	Authentication & trust models
+🧱 Tech Stack (Planned)
+HTML5
+CSS3
+JavaScript (core logic)
+Phaser.js (2D game engine)
+
+Optional future upgrade: Unity or WebGL 3D expansion
+🗺️ Mission Progress (So Far)
+
+The game is structured in missions (training chapters):
+
+✅ Mission 001: Packet Awakening
+Introduction to packet identity
+Basic movement through network nodes
+✅ Mission 002: Basic Routing
+Learning path selection
+Avoiding simple dead nodes
+✅ Mission 003: Phishing Trap Awareness
+Introduction to fake nodes / spoofed paths
+Teaching user verification instincts
+✅ Mission 004: Malware Zone
+First encounter with infected nodes
+Basic avoidance mechanics
+✅ Mission 005: Firewall Barrier
+Understanding blocked routes
+Learning permission-based navigation
+🔄 Mission 006: Firewall Breach / Secure Passage
+Advanced firewall behavior
+Timing + pattern-based traversal
+Intro to secure tunneling concepts
+🚧 Mission 007 (Planned): Source Tracking Protocol
+Packet learns to trace origin of compromised routes
+Introduces attacker source identification logic
+Early threat intelligence concept
+
+Design Philosophy
+
+Packet Runner is built around one idea:
+
+“If you can play cybersecurity, you can understand cybersecurity.”
+
+Instead of memorizing terms, players experience attacks in motion.
+
+Think:
+
+Less textbook 
+More digital survival simulation 
+Visual Direction
+Neon cyber grid aesthetic 
+Dark network void background
+Glowing packet trails
+Corrupted zones flickering like broken signals
+Clean UI overlays (terminal-inspired)
+
+Future Expansion Ideas
+3D network maps (WebGL / Three.js)
+Boss fights (AI firewall, adaptive malware)
+Multiplayer “packet race” mode
+Skill tree (Encryption, stealth routing, speed boosts)
+Real-world cyber incident recreations
+
+Current Status
+Concept phase: Advanced
+Design system: Defined
+Mission structure: In progress (1–7 outlined)
+First playable MVP: Planned (Phaser.js web build)
