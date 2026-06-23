@@ -1,0 +1,12 @@
+Subdomain Enumeratio: this involves finding valid subdomain for a domain; Aim is to expand attack surface to try discover more potential point(s) of vulnerability.
+METHODs include:
+Brute Force
+OSINT(Open Source Intelligience)
+Virtual Host
+
+some of the terms that will be used in this category are
+SSL(Secure Sockets Layer)
+TLS(Transport Later Security) 
+CA(Certificate Authority) 
+CT(Certificate Transparency)
+

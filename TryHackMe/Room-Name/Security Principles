@@ -1,0 +1,17 @@
+#Security Principles
+## CIA Triad
+These are protocols that govern Security operations in Cybersecurity as a whole.
+CIA Triad- 
+Confidentiality, Integrity, Availability
+###Confidentiality: Information not available to unauthorized access/users.
+###Integrity: Information or data must not be modified without authorized permission.
+###Availability: Information, Systems and data is readily available when needed.
+
+Models used in these principles include;
+Bell-La Padula Model... this model focuses more on confidentiality. A strong example for this model is in military operations,[No write down, 
+No read-up] i.e Principles are set from the get-go, no new rules are "written down" from the top. 
+"No read up", information cannot be read up,a low ranking officer cannot read or have access to information that is beyond and above his level
+
+Biba Model...this model focuses more on integrity. "No write up, No read down"...this way information cannot be altered from down to top
+and information cannot be read or accessed from top to down. Based on my knowledge, this fits a particular principle I've come across,
+Least Priviledge of service, this grants the least permission to individuals to get their job done.

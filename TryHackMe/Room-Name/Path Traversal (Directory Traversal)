@@ -1,0 +1,141 @@
+ What is Path Traversal?
+
+Path Traversal is a vulnerability that allows an attacker to access restricted files on a server by manipulating file path inputs.
+
+It typically occurs when user input is directly used in file system operations without proper validation.
+
+Concept Flow:
+Application expects a safe file path
+Attacker injects traversal sequences (../)
+Server resolves path outside intended directory
+Sensitive files are exposed
+
+ Basic Example
+GET /download?file=report.pdf
+ Exploit:
+GET /download?file=../../../../etc/passwd
+
+Mini Lab Idea
+
+Goal: Read a restricted file
+
+Create a test app with file loading
+Try:
+?page=../../etc/passwd
+Observe output
+
+Ask:
+
+Can you escape directories?
+Are inputs filtered?
+
+
+If vulnerable → server returns system file contents
+
+ Impact
+Access to sensitive system files (/etc/passwd)
+Exposure of application source code
+Credential leakage
+Remote code execution (in chained attacks)
+
+Common Payloads & Techniques
+1. Basic Traversal Sequences
+../
+../../
+../../../
+
+Used to move up directories.
+
+2. Absolute Path Access
+/etc/passwd
+C:\Windows\System32\drivers\etc\hosts
+
+3. URL Encoded Payloads
+../ → %2e%2e%2f
+
+Example:
+
+GET /file?name=%2e%2e%2f%2e%2e%2fetc/passwd
+
+4. Double Encoding (Filter Bypass)
+../ → %252e%252e%252f
+
+Bypasses weak filters that decode only once.
+
+5. Mixed Encoding
+..%2f
+%2e./
+
+6. Null Byte Injection (Legacy)
+file=../../etc/passwd%00.png
+
+Tricks backend into ignoring appended extensions.
+
+7. Path Traversal with Different Separators
+Linux:
+/
+Windows:
+\
+
+Example:
+
+..\\..\\Windows\\system.ini
+
+Interesting Target Files
+LINUX
+/etc/passwd - all registered users that have access to the system
+/etc/shadow - information about the system users password
+/var/www/html/config.php
+
+WINDOWS
+C:\Windows\System32\drivers\etc\hosts
+C:\boot.ini
+
+Common Vulnerable Code Patterns
+❌ Node.js Example
+app.get("/file", (req, res) => {
+  const filePath = "uploads/" + req.query.name;
+  res.sendFile(filePath);
+});
+
+ No validation → vulnerable
+
+❌ PHP Example
+include($_GET['page']);
+❌ Python Example
+open("files/" + filename)
+
+ Prevention Techniques
+✅ 1. Use Whitelisting
+
+Allow only specific filenames:
+
+const allowedFiles = ["report.pdf", "data.csv"];
+✅ 2. Normalize & Validate Paths
+
+Resolve path safely:
+
+const path = require("path");
+const safePath = path.normalize(userInput);
+✅ 3. Restrict Base Directory
+
+Ensure file stays inside allowed directory:
+
+if (!safePath.startsWith(baseDir)) {
+  return res.status(403).send("Access denied");
+}
+✅ 4. Avoid Direct File Access from User Input
+
+Use mapping:
+
+?id=1 → report.pdf
+✅ 5. Use Secure APIs
+
+Framework-level protections (e.g., safe file handlers)
+
+My Key Takeaway
+
+Path Traversal is not about clever payloads.
+It’s about the system blindly trusting file paths.
+
+If user input touches the filesystem unchecked, the attacker is already halfway inside.

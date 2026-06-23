@@ -1,0 +1,136 @@
+Overview
+
+Cybersecurity lives inside systems. Most of those systems run Linux.
+To control Linux efficiently, you use Bash scripting.
+
+ Linux = the environment
+ Bash = the control language
+ Cybersecurity = what you do inside that environment
+
+ 1. Linux Fundamentals (Entry → Intermediate)
+ What is Linux?
+
+An open-source operating system widely used in:
+
+Servers
+Cloud infrastructure
+Security tools (Kali, Parrot OS)
+
+
+Basic Commands (Entry Level)
+pwd        # show current directory
+ls         # list files
+cd folder  # change directory
+cp a b     # copy file
+mv a b     # move/rename
+rm file    # delete file
+🔹 File Permissions
+ls -l
+
+Output example:
+
+-rwxr-xr--
+
+Meaning:
+
+Owner → read/write/execute
+Group → read/execute
+Others → read
+
+Modify:
+
+chmod 755 file
+🔹 Users & Privileges
+whoami        # current user
+sudo command  # run as admin
+
+⚠️ In cybersecurity, privilege escalation is a core concept.
+
+🔹 Processes
+ps aux        # running processes
+top           # live monitoring
+kill PID      # terminate process
+🔹 Networking Basics
+ifconfig / ip a   # network interfaces
+ping google.com
+netstat -tuln     # open ports
+🧪 Mini Lab Idea
+
+Goal: Find open ports on your machine
+
+Run:
+netstat -tuln
+Identify listening ports
+Ask: “Should these be open?”
+⚡ 2. Bash Scripting (Entry → Intermediate)
+🔹 What is Bash?
+
+A shell that lets you automate commands.
+
+🔹 Basic Script Structure
+#!/bin/bash
+
+echo "Hello, Cyber World"
+
+Run:
+
+chmod +x script.sh
+./script.sh
+🔹 Variables
+name="CyberBeast"
+echo "Hello $name"
+🔹 Conditionals
+if [ $USER == "root" ]; then
+  echo "Admin access"
+else
+  echo "Standard user"
+fi
+🔹 Loops
+for i in {1..5}
+do
+  echo "Scan $i"
+done
+🔹 Simple Automation Script
+#!/bin/bash
+
+echo "Scanning open ports..."
+netstat -tuln > ports.txt
+echo "Saved to ports.txt"
+🧪 Mini Lab Idea
+
+Goal: Automate reconnaissance
+
+Create a script that:
+checks IP
+lists open ports
+saves results
+ 3. What Converges Them?
+
+Linux and Bash merge like engine + ignition.
+
+Core Connection
+Linux provides system access
+Bash provides automation + control
+
+In Cybersecurity Practice
+Task	Linux Role	Bash Role
+Recon	Run tools	Automate scans
+Privilege Escalation	Manage users	Script exploits
+Log Analysis	Access logs	Filter data
+Monitoring	System visibility	Alerts/scripts
+
+Real Example
+
+Manual:
+
+cat /var/log/auth.log
+
+Automated:
+
+grep "failed" /var/log/auth.log > attacks.txt
+ Key Insight
+
+Cybersecurity isn’t just knowing commands.
+It’s chaining them into repeatable logic.
+
+That’s where Bash transforms Linux from a tool into a weapon.

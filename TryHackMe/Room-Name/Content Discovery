@@ -1,0 +1,20 @@
+Lesson Objectives: Explain potential vulnerabilties that can be explored on the web page.
+                   Linux Commands to gain information about certain documents.
+                   Web documents that can be taken advantage of.
+
+Content Discovery: involves things that are not immediately presented and not destined for public access.
+Major procedures for used during content discovery include:
+i. Manual
+ii. OSINT(Open Source Intelligence)
+iii. Automated
+
+Manual Discovery: Involves visually observing and scanning the Web page for potential loopholes that might have been overlooked by the
+Web Developer.
+ Some of the methods include 
+Favicon: Every established webpage will always have a favicon (small icon at the top of page, like a website logo). This favicon will 
+always contain an hash value(md5sum format) that can be looked up on a certain website that can provide more information about the documenting
+and tools used to create the site.
+
+Sitemap.XML
+HTTP headers
+Frame work
