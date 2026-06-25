@@ -1,0 +1,13 @@
+In this room, i was tasked with getting the password for a user's login. THe username was provided already. here's the command i ran below
+P.S this is the 1st time i'm working with hydra in a lab.
+The particular command i ran, i ended it with the "-V" which displayed the results after each trial and the number.
+it ran for 84000 attempts out of about 143443 trails. it was taking too long and i got a hint it shouldn't exceed 30 attempts. 
+So i adjusted the command and ran again, the 2nd command pushed 34000 attempts before i stopped it.
+
+I checked the command and adjusted it again, it finally worked this time, i got the password with 34 attempts, was able to login with the username and got the flag
+
+The next challenge involved brute forcing an ssh login. THe command here was easier than that of the first challenge. something like 
+"hydra -l molly -P /root/usr/Desktop/wordlists/rockyou.txt ip address ssh -V"
+
+I got the password in about 7 attempts, used it to log into the account via ssh. 
+I looked for suspicous content  then 'cat' the file name to read the 2nd flag.
