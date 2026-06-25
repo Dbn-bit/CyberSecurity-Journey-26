@@ -11,3 +11,24 @@ The next challenge involved brute forcing an ssh login. THe command here was eas
 
 I got the password in about 7 attempts, used it to log into the account via ssh. 
 I looked for suspicous content  then 'cat' the file name to read the 2nd flag.
+
+Successfully recovered molly's SSH credentials using Hydra with verbose output and correct SSH module syntax, enabling shell access.
+
+SSH credential recovery demonstrates working knowledge of automated login testing and service-specific module selection.
+
+Flow:
+- Corrected service target to SSH
+- Applied threading optimization
+- Executed bruteforce and obtained credentials
+
+Action points i should take note of include:
+Proxy-capture form before HYDRA
+Tune thread counts based on Latency
+
+Earlier, i kept using ssh command for ftp format,i learnt from this after the cracking took way too long with no results.
+Something i have learnt going forward is the tool doesn't have any issue, it's the command or the format it's been used in or for that causes the issue if any is encountered
+
+25/06/2026
+
+- Applied threading optimization
+- Executed brute force and obtained credentials
