@@ -1,0 +1,11 @@
+Provided here is my documentation for Gobuster, this is the 1st time of working with this module. Let's proceed.
+
+It is often used for reconnaissance, this tool can enumerate web directories, subdomains, and virtual hosts.
+
+Objectives
+Understanding the basics of enumeration.
+How to use Gobuster to enumerate web directories and files.
+How to use Gobuster to enumerate subdomains.
+How to use Gobuster to enumerate virtual hosts.
+How to use a wordlist.
+
