@@ -1,0 +1,176 @@
+CYBER SEASON 001
+
+Week of June 29 - July 5, 2026
+
+🎯 Mission Theme
+
+Build Strong Foundations
+
+This week's objective is not speed.
+It is understanding.
+
+By the end of the week, I should understand every concept I touched well enough to explain it to someone else.
+
+---
+
+🛡️ TryHackMe Objective
+
+Focus:
+
+- Gobuster fundamentals
+- Directory enumeration
+- Virtual hosts
+- Subdomains
+- Practical usage and common flags
+
+Success Criteria:
+
+- Complete the room.
+- Understand what every major Gobuster flag does.
+- Be able to explain when Gobuster should and shouldn't be used.
+- Save useful commands into a personal cheat sheet.
+
+---
+
+🔴 Red Team Project
+
+Project:
+Build a Personal Red Team Lab
+
+Goal:
+Create a safe environment where future projects can be performed without touching real systems.
+
+Milestones:
+
+- Install required virtualization software.
+- Prepare Kali Linux.
+- Prepare one victim machine.
+- Configure networking.
+- Verify communication between machines.
+- Document every step.
+
+Remember:
+The lab doesn't need to be perfect this week.
+It only needs to exist.
+
+---
+
+🐧 Linux Objective
+
+Daily practice.
+
+Topics:
+
+- File navigation
+- Permissions
+- File searching
+- Networking basics
+- Package management
+
+Goal:
+Become more comfortable using Linux without relying on Google for every command.
+
+---
+
+🔍 CVE Investigation
+
+Continue yesterday's CVE research.
+
+Objectives:
+
+- Understand the vulnerability.
+- Identify the affected software.
+- Learn the attack path.
+- Understand the patch or mitigation.
+- Explain the vulnerability in simple language.
+
+---
+
+🎮 Packet Runner
+
+Begin planning Act II: Shadow Protocol.
+
+Objectives:
+
+- Expand lore.
+- Reuse previously unlocked Packet abilities.
+- Brainstorm future mission mechanics.
+- Connect educational concepts to gameplay.
+
+No rush.
+Quality over quantity.
+
+---
+
+🇩🇪 German Objective
+
+Daily practice.
+
+Focus:
+
+- Separable verbs
+- Basic sentence structure
+- Dative review
+- Speaking aloud
+- Vocabulary revision
+
+Goal:
+Learn enough vocabulary to comfortably use at least five new words in conversation.
+
+---
+
+📚 Documentation
+
+Create notes throughout the week.
+
+Don't wait until Sunday.
+
+Document:
+
+- Commands
+- Mistakes
+- Lessons learned
+- Screenshots
+- Interesting discoveries
+
+Future you will appreciate today's notes.
+
+---
+
+🧠 Mindset
+
+"I don't need to finish everything.
+
+I need to understand something every day."
+
+---
+
+✅ End-of-Week Debrief
+
+On the weekend answer:
+
+1. What new skill did I gain?
+2. What challenged me the most?
+3. What topic still feels confusing?
+4. What deserves a GitHub write-up?
+5. What becomes a Packet Runner mission?
+6. What should next week's season focus on?
+
+Mission Status:
+
+⬜ Gobuster mastered
+
+⬜ Red Team Lab started
+
+⬜ Linux improved
+
+⬜ CVE analyzed
+
+⬜ German practiced daily
+
+⬜ Packet Runner expanded
+
+⬜ Notes documented
+
+Mission Outcome:
+MISSION... IN PROGRESS
