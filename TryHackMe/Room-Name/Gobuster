@@ -9,3 +9,16 @@ How to use Gobuster to enumerate subdomains.
 How to use Gobuster to enumerate virtual hosts.
 How to use a wordlist.
 
+Missing http:// or https:// in URL causes command failures. The -u flag requires a full protocol-prefixed URL.
+
+Correct URL syntax is essential for any web enumeration tool to function properly.
+
+Flow:
+- Add http:// or https:// prefix
+- Verify URL format before execution
+- Re-run with corrected URL
+
+
+
+Working with Gobuster has gotten very confusing, i've followed every step, used the correct commands but it's still confusing.
+I referred to using the help logs for dir mode, dns mode and vhost mode. I understand a lttle better but i still need more practice.
