@@ -1,0 +1,31 @@
+Shells in cyber security are widely used by attackers to remotely control systems, making them an important part of the attack chain. 
+In this room, I explored different shells used in offensive security, the differences between them, and their use cases. This 
+knowledge can help enhance penetration testing and exploitation skills and also help us understand how to detect when a remote shell 
+is being used by an attacker within an organization.
+
+A shell is software that allows a user to interact with an OS. It can be a graphical interface, but it is usually a command-line 
+interface, and this will depend on the operating system running on the target system.
+
+REVERSE SHELL
+Is the most common shell in pen. testing;
+The Attacker prepares a listener, a vulnmachine connects back to the attacker and the atttacker gains a shell.
+What makes the Reverse shell popular?
+- Many firewalls block incoming connections.
+- Outgoing firewalls are often allowed.
+- The Tarhet"calls" the attacker instead of waiting for a call.
+
+BIND SHELL
+This works the opposite way. The target opens a port and waits. The Attacker then connects directly to that port.
+This can be blocked more easily becausemthe target exposes a listening service.
+
+INTERACTIVE vs NON-INTERACTIVE SHELLS
+Sometimes, a shell might feel broken when expected commands don't work on it. This is generally termed Non-Interactive shell.
+The goal is to often to upgrade it into an interactive TTY shell, which behaves more like a normal shell.
+
+Learning shells allows the attacker or tester to;
+- Navigate the File Systems
+- Read files
+- Check users and permissions
+- Continue investigating the system, if you're authorized to do so.
+
+
