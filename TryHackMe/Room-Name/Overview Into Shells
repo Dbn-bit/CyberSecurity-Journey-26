@@ -28,4 +28,9 @@ Learning shells allows the attacker or tester to;
 - Check users and permissions
 - Continue investigating the system, if you're authorized to do so.
 
+nc -lvnp 443
+The command above uses the -l option to indicate Netcat to listen or wait for a connection. The -v option enables verbose mode. The -n option 
+prevents the connections from using DNS for lookup, so it will not resolve any hostname it will use an IP address. Finally, the -p 
+flag indicates the port that will be used to wait for the connection, in the case above, port 443.
+
 
