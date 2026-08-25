@@ -1,0 +1,229 @@
+## Metasploitable2 Web Enumeration Lab
+
+**Author:** Eniola "DarkPrime" Adeniyi
+**Lab Environment:** Kali Linux (WSL) + VirtualBox + Metasploitable2
+**Date:** 28 July 2026
+
+---
+
+### Objective
+
+The objective of this lab was to build a local penetration-testing environment and perform basic reconnaissance and web enumeration against the intentionally vulnerable **Metasploitable2** virtual machine.
+
+---
+
+### Lab Setup
+
+#### Attacker Machine
+
+* **OS:** Kali Linux (WSL)
+* **Tools Used:**
+
+  * Nmap
+  * Curl
+  * Gobuster
+  * Firefox / Browser
+  * DVWA
+
+#### Target Machine
+
+* **OS:** Metasploitable2 (Ubuntu-based vulnerable VM)
+* **IP Address:** `192.168.0.186`
+
+---
+
+### Network Verification
+
+Connectivity between the attacker and target was verified using ICMP.
+
+```bash
+ping 192.168.0.186
+```
+
+**Result:** 0% packet loss, successful communication confirmed.
+
+---
+
+### Service Enumeration
+
+A version detection scan was performed using Nmap.
+
+```bash
+nmap -sV 192.168.0.186
+```
+
+#### Key Open Services
+
+| Port | Service    | Version              |
+| ---- | ---------- | -------------------- |
+| 21   | FTP        | vsftpd 2.3.4         |
+| 22   | SSH        | OpenSSH 4.7p1        |
+| 23   | Telnet     | Linux telnetd        |
+| 25   | SMTP       | Postfix              |
+| 80   | HTTP       | Apache 2.2.8         |
+| 139  | SMB        | Samba                |
+| 445  | SMB        | Samba                |
+| 3306 | MySQL      | 5.0.51a              |
+| 5432 | PostgreSQL | 8.3.x                |
+| 8180 | Tomcat     | Apache Tomcat/Coyote |
+
+---
+
+### Initial Web Reconnaissance
+
+The web server was inspected using:
+
+```bash
+curl http://192.168.0.186
+```
+
+#### Exposed Applications
+
+* `/twiki/`
+* `/phpMyAdmin/`
+* `/mutillidae/`
+* `/dvwa/`
+* `/dav/`
+
+---
+
+### Directory Enumeration
+
+Gobuster was used with the DIRB common wordlist.
+
+```bash
+gobuster dir -u http://192.168.0.186 -w /usr/share/wordlists/dirb/common.txt
+```
+
+#### Results
+
+| Path             | Status |
+| ---------------- | ------ |
+| `/phpMyAdmin`    | 301    |
+| `/dav`           | 301    |
+| `/phpinfo.php`   | 200    |
+| `/test`          | 301    |
+| `/twiki`         | 301    |
+| `/server-status` | 403    |
+| `/cgi-bin/`      | 403    |
+
+---
+
+### Information Disclosure Finding
+
+The following endpoint exposed server configuration details:
+
+```bash
+curl -I http://192.168.0.186/phpinfo.php
+```
+
+Browser inspection revealed:
+
+* **PHP Version:** `5.2.4-2ubuntu5.10`
+
+This version is **end-of-life** and would represent a significant security risk in a production environment.
+
+---
+
+### Recursive Enumeration
+
+Further enumeration of the `/test/` directory revealed enabled directory indexing.
+
+```bash
+curl http://192.168.0.186/test/
+```
+
+A subdirectory was discovered:
+
+```text
+/test/testoutput/
+```
+
+Inspecting it produced:
+
+```bash
+curl http://192.168.0.186/test/testoutput/
+```
+
+#### Discovered Artifact
+
+```text
+ESAPI_logging_file_test
+```
+
+**Observation:** Although the file was empty, its name leaked information about the possible use of **OWASP ESAPI-related logging functionality**, demonstrating an **information disclosure via directory listing**.
+
+---
+
+### DVWA Assessment
+
+#### Authentication
+
+Successful login with default credentials:
+
+```text
+Username: admin
+Password: password
+```
+
+#### Security Configuration
+
+* **DVWA Security Level:** `Low`
+
+#### SQL Injection Module
+
+Testing with `id=1` returned valid user information (first name and surname).
+
+Additional testing of IDs **1-5** produced different records, indicating that:
+
+* user-controlled input influences database queries,
+* the application retrieves records dynamically based on the supplied identifier,
+* the parameter is suitable for further SQL injection experimentation within the controlled DVWA environment.
+
+---
+
+### Skills Practiced
+
+* Virtual machine deployment
+* Bridged networking configuration
+* Host discovery
+* Service enumeration
+* HTTP reconnaissance
+* Directory brute-forcing
+* Information disclosure analysis
+* Recursive web enumeration
+* Basic web application testing
+* Parameter manipulation and observation
+
+---
+
+### Lessons Learned
+
+1. **Enumeration is iterative.** Discoveries from one step guide the next step.
+2. **HTTP headers and configuration pages can reveal valuable intelligence.**
+3. **Directory listing is a common but often overlooked security weakness.**
+4. **Changing URL parameters directly is an essential web testing technique.**
+5. **Default credentials remain one of the most common real-world security issues.**
+
+---
+
+### Conclusion
+
+This lab successfully established a functional local penetration-testing environment and demonstrated a complete beginner-to-intermediate web enumeration workflow against Metasploitable2. The assessment identified multiple intentionally vulnerable services, exposed web applications, information disclosure issues, and dynamic database-backed functionality within DVWA.
+
+The exercise provided practical experience with the reconnaissance and enumeration phases of a penetration test while reinforcing the importance of structured documentation and evidence collection.
+
+---
+
+### Evidence Checklist
+
+* [x] VirtualBox Metasploitable2 VM running
+* [x] Successful `ping` output
+* [x] Nmap scan results
+* [x] Gobuster enumeration results
+* [x] `phpinfo.php` page
+* [x] `/test/` directory listing
+* [x] `/test/testoutput/` listing
+* [x] DVWA login page
+* [x] DVWA Security Level = Low
+* [x] SQL Injection module showing valid user records
