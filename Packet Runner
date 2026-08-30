@@ -1,0 +1,238 @@
+Packet Runner
+Cybersecurity Learning Game Design Document (v1.0)
+1. Executive Summary
+Project Name: Packet Runner
+Genre:
+Endless Runner
+Educational Game
+Cybersecurity Awareness
+Target Audience:
+Students
+Cybersecurity Beginners
+TryHackMe Learners
+IT Enthusiasts
+Secondary School & University Students
+Core Vision:
+Packet Runner transforms abstract cybersecurity concepts into interactive gameplay.
+Players become a data packet traversing networks, making security decisions while avoiding cyber threats.
+Instead of reading about phishing or malware, players experience them.
+2. Problem Statement
+Many people find cybersecurity:
+Difficult
+Technical
+Boring
+Overwhelming
+Packet Runner aims to solve this by:
+Visualizing cyber concepts
+Gamifying learning
+Creating memorable experiences
+3. Learning Objectives
+After playing, a user should understand:
+Beginner
+What data packets are
+What servers do
+Password security
+Phishing attacks
+Intermediate
+Malware
+Firewalls
+Antivirus systems
+Network traffic
+Advanced
+VPNs
+Encryption
+Network segmentation
+DDoS attacks
+Expert
+Incident Response
+Threat Hunting
+SOC Operations
+4. Game World
+The Internet is represented as a living digital universe.
+Zones
+Home Network
+First levels
+Safe environment
+Teaches basics
+Public Wi-Fi City
+Fake hotspots
+Credential theft
+Man-in-the-middle attacks
+Malware Wasteland
+Viruses
+Trojans
+Worms
+Firewall Fortress
+Security checkpoints
+Access control puzzles
+Encryption Tunnels
+Hidden routes
+Safe passage
+Enterprise Network
+Advanced threats
+Multi-stage objectives
+5. Main Character
+The Packet
+The player is literally a network packet.
+Attributes
+Integrity
+Confidentiality
+Availability
+These are the famous CIA Triad concepts disguised as health bars.
+Example:
+Integrity = Data Accuracy
+Confidentiality = Data Privacy
+Availability = Ability to Reach Destination
+6. Enemies
+Malware Bot
+Purpose: Teaches malware infections.
+Attack: Corrupts packet data.
+Phishing Portal
+Purpose: Teaches social engineering.
+Attack: Tricks player into entering credentials.
+DDoS Storm
+Purpose: Teaches service disruption.
+Attack: Blocks movement.
+Packet Sniffer
+Purpose: Teaches interception.
+Attack: Reads unencrypted traffic.
+Ransomware Beast
+Purpose: Teaches ransomware.
+Attack: Locks progress until solved.
+7. Power-Ups
+VPN Shield
+Effect:
+Invisible route
+Safe travel
+Lesson:
+Privacy and anonymity.
+Encryption Key
+Effect:
+Protects packet
+Lesson:
+Encryption protects data.
+Multi-Factor Token
+Effect:
+Unlocks secured areas
+Lesson:
+MFA increases security.
+Firewall Pass
+Effect:
+Bypass authorized checkpoints
+Lesson:
+Access control.
+8. Game Loop
+Plain text
+Spawn
+ ↓
+Navigate Network
+ ↓
+Encounter Threat
+ ↓
+Make Security Decision
+ ↓
+Receive Feedback
+ ↓
+Gain Score
+ ↓
+Advance Level
+The cycle repeats while introducing harder concepts.
+9. Example Scenario
+Player encounters:
+LOGIN TO CONTINUE
+URL displayed:
+secure-paypal-login.net
+Player Choices:
+A. Trust Site
+B. Inspect URL
+If A:
+Credentials stolen.
+Mini Lesson appears.
+If B:
+Threat detected.
+Reward points awarded.
+10. Scoring System
+Security Score
+Rewards:
+Safe decisions
+Threat detection
+Fast completion
+Risk Score
+Penalties:
+Falling for phishing
+Malware infections
+Data leaks
+11. MVP Scope
+Build only these:
+Mechanics
+Move left
+Move right
+Jump
+Enemies
+Malware
+Phishing portals
+Power-Ups
+Encryption Key
+Levels
+Home Network
+Public Wi-Fi City
+Learning Content
+Passwords
+Phishing
+Basic Malware
+This keeps development manageable.
+12. Technology Stack
+Recommended Version
+Frontend
+HTML5
+CSS3
+JavaScript
+Game Engine
+Phaser.js
+Hosting
+GitHub Pages
+Version Control
+Git
+Documentation
+Markdown
+13. Future Expansion
+Multiplayer
+Players send packets between each other.
+Capture The Flag Mode
+Cybersecurity challenges embedded into gameplay.
+Threat Hunter Mode
+Players investigate suspicious activity.
+Red Team vs Blue Team
+Attackers vs defenders.
+14. Portfolio Value
+This project demonstrates:
+Web Development
+JavaScript
+Game Design
+Cybersecurity Awareness
+UX Design
+Educational Technology
+For recruiters, it instantly tells a story:
+"This candidate understands both technology and how to teach technology."
+Development Roadmap
+Phase 1
+Design game world
+Draw assets
+Create documentation
+Phase 2
+Learn Phaser basics
+Build player controller
+Build collision system
+Phase 3
+Add threats
+Add lessons
+Add scoring
+Phase 4
+Testing
+Bug fixing
+Deployment
+Phase 5
+Public release
+Gather feedback
+Expand content
+This concept fits surprisingly well with your profile because it sits at the intersection of your interests: gaming, web development, cybersecurity, and content creation. It is also realistic to build on modest hardware once you have access to your laptop again.
